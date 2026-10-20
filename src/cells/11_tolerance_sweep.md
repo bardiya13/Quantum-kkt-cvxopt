@@ -1,0 +1,3 @@
+### E4b, IPM tolerance and direction error
+
+E4 uses CVXOPT's default tolerances. E4b repeats it at $\tau \in \{10^{-4}, 10^{-6}, 10^{-8}\}$ with `abstol` = `feastol` = $\tau$ and `reltol` = $10\tau$. The acceptance thresholds of the final iterate scale with $\tau$ (pres, dres $\le 10\tau$; relative gap and objective error $\le 100\tau$; $\tau = 10^{-7}$ gives the defaults). The inner solvers are exact solves with isotropic ($\delta = 10^{-8} \dots 10^{-5}$) or block-relative error, the combined-test MINRES and the unmodified solver. The result is the largest tolerated $\delta$ as a function of $\tau$.

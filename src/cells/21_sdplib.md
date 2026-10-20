@@ -1,0 +1,3 @@
+## 21. SDPLIB with `conelp` (optional, S1)
+
+If the SDPLIB `*.dat-s` files are found (for example as a Kaggle dataset) or can be downloaded, they are converted to CVXOPT's `conelp` form, $\min c^\top x$ s.t. $Gx + s = h$, $s \in \mathcal K$. SDPA's $X = \sum_i x_i F_i - F_0 \succeq 0$ becomes $G_k = [-\mathrm{vec}\, F_i^{(k)}]$ and $h_k = -\mathrm{vec}\, F_0^{(k)}$; diagonal blocks become rows of the linear cone. Objective values are compared with the values in the SDPLIB README. The callback uses the generic cone path of the assembler (`misc.scale` and packed storage), so the KKT systems of real semidefinite programs go through the same solvers and tests. The `hinf*` problems are degenerate.

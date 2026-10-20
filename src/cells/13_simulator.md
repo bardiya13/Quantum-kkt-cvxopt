@@ -1,0 +1,7 @@
+## 13. Statevector simulator
+
+Two quantum linear solvers are simulated: phase-estimation HHL (Harrow, Hassidim and Lloyd 2009; Sections 14 and 16) as the reference algorithm, and a polynomial solver over a qubitised walk (Section 15), whose cost grows with $\log(1/\epsilon)$ instead of $1/\epsilon$. Both use the same oracle model: the matrix and the right-hand side are loaded by ideal block encoding and state preparation, $\|A\|$ and $\kappa$ are known, and the classical cost of building these oracles in the simulation is timed separately as `t_prep`. Every number reported for them is a classical simulation of an ideal quantum computer.
+
+`MiniSim` applies H, controlled-$U$, controlled-phase, swap and multi-controlled $R_y$ gates to a $2^n$ statevector, logs every gate for counts and depth, and samples measurements from the Born probabilities. Qubit $q$ is bit $q$ of the basis index (little-endian, as in Qiskit). The same code runs on NumPy or CuPy. The cell checks the QFT against the DFT matrix, the ordering of controlled gates, measurement marginals, state preparation, and the vectorised reciprocal rotation against a loop of multi-controlled gates. The quantum path uses no linear solve, inverse or eigendecomposition; exact eigenvalues are computed only for diagnostics ($\kappa$, eigenvalues below the clock resolution) and timed separately.
+
+`max_qubits` and `max_state_bytes` in the configuration bound the simulated register; a larger circuit is reported as `skipped`.
