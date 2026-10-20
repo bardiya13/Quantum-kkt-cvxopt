@@ -1,0 +1,9 @@
+instance_id,100.0,250.0,1000.0,4000.0
+dense_kappa_n10_k0_s0,0,5,5,5
+dense_kappa_n10_k0_s1,0,5,5,5
+dense_kappa_n10_k3_s0,0,0,0,4
+dense_kappa_n10_k3_s1,0,0,0,5
+dense_noeq_n10_k0_s0,0,5,5,5
+tiny_A,5,5,5,5
+tiny_B,5,5,5,5
+tiny_C,5,5,5,5

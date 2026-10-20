@@ -1,0 +1,4 @@
+method,fastest_on
+cvxopt_default,40
+custom_exact_reduced,6
+minres_fused_comb_switch_cpu,2
