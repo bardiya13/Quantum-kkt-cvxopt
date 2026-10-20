@@ -1,0 +1,5 @@
+per-iteration Ruiz equilibration & $\kappa$ in $d$ and $\norm{c}_1$ & $d\propto\kappa\log(\kappa/\eps)$, $\norm{c}_1=\tilde\Theta(\kappa)$ & $\kappa$: $4.3\times10^{4}$ (\texttt{sparse\_banded}), $5.4\times10^{3}$ (\texttt{dense\_kappa}); $d$: $1.2\times10^{5}$, $1.2\times10^{4}$ & Table~\ref{tab:equil}\\
+optimal vs.\ CKS polynomial & $d$, $\norm{c}_1$ & same order, smaller constant & walk steps $2.70\times$; per accepted sample $4.8\times$ (38 pairs) & Sec.~\ref{sec:qpoly}\\
+low-precision circuit ($\eps=0.3$) + refinement vs.\ high-precision circuit & samples, rounds, $d$ & Eq.~\eqref{eq:qcost} & queries $237\times$ (500 samples/round), $624\times$ (200) & Sec.~\ref{sec:qcost}\\
+refinement vs.\ direct readout to $\eps_f=10^{-8}$ & samples per KKT solve & $\Theta(N/\eps_f^2)\to\Theta(N\log(1/\eps_f))$ & $3.9\times10^{17}$ (model, $c_0=1.10$, $N=32$) vs.\ $7.3\times10^{3}$ (measured) & Cor.~\ref{cor:precision}\\
+positive definite null-space target & $d$ & $\sqrt\kappa$ instead of $\kappa$ & walk steps $4.0\times$ inside the IPM; $p_{\text{succ}}$ $4.5\times10^{-13}$ vs.\ $3.8\times10^{-8}$ & Sec.~\ref{sec:oss}\\

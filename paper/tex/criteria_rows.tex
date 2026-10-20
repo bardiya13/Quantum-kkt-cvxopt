@@ -1,0 +1,17 @@
+relative residual $10^{-6}$ & none & 100 & 62 & 432 & 2\,444 & 0.152\\
+backward error $10^{-10}$ & none & 87 & 54 & 376 & 5\,012 & 0.332\\
+block $\eta=0.1$ & none & 99 & 50 & 444 & 2\,100 & 0.116\\
+relative residual $10^{-6}$ & Ruiz & 100 & 100 & 0 & 712 & 0.046\\
+backward error $10^{-6}$ & Ruiz & 26 & 21 & 284 & 1\,836 & 0.263\\
+backward error $10^{-8}$ & Ruiz & 78 & 75 & 186 & 952 & 0.063\\
+backward error $10^{-10}$ & Ruiz & 100 & 100 & 0 & 856 & 0.058\\
+backward error $10^{-12}$ & Ruiz & 100 & 100 & 0 & 1\,016 & 0.063\\
+block $\eta=0.5$ & Ruiz & 96 & 91 & 38 & 1\,064 & 0.077\\
+block $\eta=0.1$ & Ruiz & 100 & 100 & 0 & 648 & 0.044\\
+block $\eta=0.01$ & Ruiz & 100 & 100 & 0 & 752 & 0.047\\
+combined ($\eta=0.1$, $\tau_\omega=10^{-10}$) & Ruiz & 100 & 100 & 0 & 868 & 0.054\\
+combined, latency-optimised kernel & Ruiz & 100 & 100 & 0 & 880 & 0.035\\
+adaptive backward error (NT spread) & Ruiz & 96 & 96 & 0 & 832 & 0.064\\
+\midrule
+LDL$\T$ (\textsc{cvxopt}, unmodified) & -- & 100 & 100 & 0 & 0 & 0.0012\\
+reduced system, CHOLMOD & -- & 100 & 100 & 0 & 0 & 0.0064\\

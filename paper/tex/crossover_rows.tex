@@ -1,0 +1,19 @@
+MINRES CPU / LDL$\T$, \texttt{sparse\_banded}, $N=4\,960$ & 1.26 & 1.28 & 1.05 & 1.29 & 1.47\\
+MINRES CPU / LDL$\T$, \texttt{sparse\_banded}, $N=9\,920$ & 3.50 & 3.86 & 3.12 & 3.97 & 4.11\\
+MINRES CPU / LDL$\T$, \texttt{sparse\_banded}, $N=19\,840$ & 9.42 & 9.14 & 9.49 & -- & 9.08\\
+GPU / CPU MINRES, \texttt{sparse\_banded}, $N=19\,840$ & 1.02 & 1.01 & 1.10 & -- & --\\
+GPU / CPU MINRES, \texttt{sparse\_banded}, $N=79\,360$ & 3.75 & 3.68 & 3.68 & -- & --\\
+CHOLMOD / LDL$\T$, \texttt{sparse\_lowfill}, $N=39\,680$ & 1.83 & 1.78 & 1.78 & -- & --\\
+MINRES GPU / LDL$\T$, \texttt{sparse\_lowfill}, $N=79\,360$ & 3.85 & 3.87 & 3.99 & -- & --\\
+strict: LCU $\eps=10^{-10}$, ideal & 8/8 & 8/8 & 7/7 & 7/7 & 8/8\\
+strict: LCU $\eps=0.3$, ideal & 8/8 & 8/8 & 7/7 & 7/7 & 8/8\\
+strict: LCU $\eps=0.3$, $S=250$ & 6/8 & 6/8 & 5/7 & 5/7 & 6/8\\
+strict: LCU CKS, $S=10^4$ & 7/8 & 7/8 & 6/7 & 6/7 & 7/8\\
+strict: null space, ideal & 8/8 & -- & -- & 7/7 & 8/8\\
+strict: null space, $S=250$ & 2/8 & -- & -- & 2/7 & 2/8\\
+Maros--M\'esz\'aros: LDL$\T$ fastest & 40/48 & -- & -- & 12/13 & 39/48\\
+Maros--M\'esz\'aros: MINRES with fallback & 26/48 & -- & -- & 5/13 & 26/48\\
+largest error tolerated on all instances, $\tau=10^{-6}$ & $10^{-7}$ & -- & -- & $10^{-7}$ & $10^{-7}$\\
+largest error tolerated on all instances, $\tau=10^{-4}$ & $10^{-5}$ & -- & -- & $10^{-5}$ & $10^{-5}$\\
+shot-seed sweep, strict at 250 samples/round & 30/40 & -- & -- & 25/35 & 30/40\\
+shot-seed sweep, strict at $4\,000$ samples/round & 39/40 & -- & -- & 32/35 & 37/40\\
