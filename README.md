@@ -100,4 +100,4 @@ Edit the cells in `src/cells/` and rebuild with `python src/build_notebook.py`; 
 
 ## License
 
-The code is released under the MIT License (see `LICENSE`). The manuscript in `paper/` is copyright of the authors and is not covered by this license..
+The code is released under the MIT License (see `LICENSE`). The manuscript in `paper/` is copyright of the authors and is not covered by this license.
